@@ -1,9 +1,5 @@
 # README
 
-tech::expert 33　Shigeki Uchida
-Chat-Space
-
-
 db design
 
 ## users table
