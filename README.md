@@ -18,7 +18,7 @@ association
 |column|Type|Options|
 |------|----|-------|
 |user_id|references|foreign_key: true|
-|group_id|referencesr|foreign_key: true|
+|group_id|references|foreign_key: true|
 |body|text||
 |image|string||
 
