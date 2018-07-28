@@ -18,6 +18,22 @@ association
 - has_many :group_users
 - has_many :messages
 
+## users table
+|column|Type|Options|
+|------|----|-------|
+|id|-|-|
+|user_id|integer||
+|group_id|integer|foreign_key: true|
+|message_id|integer||
+|name|string|null: false, unique: true, add_index :users, :name|
+|email||(devise), null: false, unique: true|
+|password||(devise), null: false|
+
+association
+- has_many :groups, through::group_users
+- has_many :group_users
+- has_many :messages
+
 
 ##messages tabel
 |column|Type|Options|
