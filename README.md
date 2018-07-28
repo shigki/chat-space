@@ -1,24 +1,60 @@
 # README
+------------------------------
+tech::expert 33　Shigeki Uchida
+Chat-Space
+------------------------------
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+db design
+------------------------------
+## users table
+|column|Type|Options|
+|------|----|-------|
+|id|-|-|
+|user_id|integer||
+|group_id|integer|foreign_key: true|
+|message_id|integer||
+|name|string|null: false, unique: true, add_index :users, :name|
+|email||(devise), null: false, unique: true|
+|password||(devise), null: false|
 
-Things you may want to cover:
+###association
+- has_many :groups, through::group_users
+- has_many :group_users
+- has_many :messages
 
-* Ruby version
+--------------------------------
+##messages tabel
+|id|-|-|
+|user_id|integer|foreign_key: true|
+|body|text||
+|image|string||
+|group_id|integer|foreign_key: true|
 
-* System dependencies
+###association
+- belongs_to :group
+- belongs_to :user
 
-* Configuration
+---------------------------------
+##groups table
+|id|||
+|user_id|integer|foreign_key: true|
+|message_id|integer|foreign_key: true|
+|name|string|null: false, unique: true|
 
-* Database creation
+###association
+- has_many :users, through::group_users
+- has_many :group_users
+- has_many :messages
 
-* Database initialization
+----------------------------------
+##group_users
+|id|||
+|group_id|integer|foreign_key: true|
+|user_id|integer|foreign_key: true|
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+###association
+- belongs_to :group
+- belongs_to :user
 
-* Deployment instructions
-
-* ...
+-----------------------------------
