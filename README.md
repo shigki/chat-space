@@ -17,8 +17,8 @@ association
 ## messages table
 |column|Type|Options|
 |------|----|-------|
-|user_id|integer|foreign_key: true|
-|group_id|integer|foreign_key: true|
+|user_id|references|foreign_key: true|
+|group_id|referencesr|foreign_key: true|
 |body|text||
 |image|string||
 
@@ -41,8 +41,8 @@ association
 ## group_users table
 |column|Type|Options|
 |------|----|-------|
-|user_id|integer|foreign_key: true|
-|group_id|integer|foreign_key: true|
+|user_id|references|foreign_key: true|
+|group_id|referencesforeign_key: true|
 
 association
 - belongs_to :group
