@@ -1,11 +1,11 @@
 # README
-------------------------------
+
 tech::expert 33　Shigeki Uchida
 Chat-Space
-------------------------------
+
 
 db design
-------------------------------
+
 ## users table
 |column|Type|Options|
 |------|----|-------|
@@ -22,7 +22,7 @@ db design
 - has_many :group_users
 - has_many :messages
 
---------------------------------
+
 ##messages tabel
 |id|-|-|
 |user_id|integer|foreign_key: true|
@@ -34,7 +34,6 @@ db design
 - belongs_to :group
 - belongs_to :user
 
----------------------------------
 ##groups table
 |id|||
 |user_id|integer|foreign_key: true|
@@ -46,7 +45,7 @@ db design
 - has_many :group_users
 - has_many :messages
 
-----------------------------------
+
 ##group_users
 |id|||
 |group_id|integer|foreign_key: true|
