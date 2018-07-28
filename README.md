@@ -20,17 +20,21 @@ association
 
 
 ##messages tabel
+|column|Type|Options|
+|------|----|-------|
 |id|-|-|
 |user_id|integer|foreign_key: true|
 |body|text||
 |image|string||
 |group_id|integer|foreign_key: true|
 
-association
+###association
 - belongs_to :group
 - belongs_to :user
 
 ##groups table
+|column|Type|Options|
+|------|----|-------|
 |id|||
 |user_id|integer|foreign_key: true|
 |message_id|integer|foreign_key: true|
@@ -43,6 +47,8 @@ association
 
 
 ##group_users
+|column|Type|Options|
+|------|----|-------|
 |id|||
 |group_id|integer|foreign_key: true|
 |user_id|integer|foreign_key: true|
