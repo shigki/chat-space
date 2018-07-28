@@ -7,7 +7,7 @@ db design
 |------|----|-------|
 |id|-|-|
 |group_id|integer|foreign_key: true|
-|message_id|integer||
+|message_id|integer|foreign_key: true|
 |name|string|null: false, unique: true, add_index :users, :name|
 |email||(devise), null: false, unique: true|
 |password||(devise), null: false|
@@ -21,11 +21,10 @@ association
 |column|Type|Options|
 |------|----|-------|
 |id|-|-|
-|user_id|integer||
+|user_id|integer|foreign_key: true|
 |group_id|integer|foreign_key: true|
 |body|text||
 |image|string||
-|group_id|integer||
 
 
 association
@@ -52,7 +51,6 @@ association
 |id|-|-|
 |user_id|integer|foreign_key: true|
 |group_id|integer|foreign_key: true|
-|name|string|null: false, unique: true, add_index :users, :name|
 
 association
 - belongs_to :group
