@@ -42,7 +42,7 @@ association
 |column|Type|Options|
 |------|----|-------|
 |user_id|references|foreign_key: true|
-|group_id|referencesforeign_key: true|
+|group_id|references|foreign_key: true|
 
 association
 - belongs_to :group
