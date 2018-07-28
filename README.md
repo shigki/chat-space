@@ -17,7 +17,7 @@ db design
 |email||(devise), null: false, unique: true|
 |password||(devise), null: false|
 
-###association
+association
 - has_many :groups, through::group_users
 - has_many :group_users
 - has_many :messages
@@ -30,7 +30,7 @@ db design
 |image|string||
 |group_id|integer|foreign_key: true|
 
-###association
+association
 - belongs_to :group
 - belongs_to :user
 
@@ -40,7 +40,7 @@ db design
 |message_id|integer|foreign_key: true|
 |name|string|null: false, unique: true|
 
-###association
+association
 - has_many :users, through::group_users
 - has_many :group_users
 - has_many :messages
@@ -52,7 +52,7 @@ db design
 |user_id|integer|foreign_key: true|
 
 
-###association
+association
 - belongs_to :group
 - belongs_to :user
 
