@@ -5,22 +5,18 @@ db design
 ## users table
 |column|Type|Options|
 |------|----|-------|
-|id|-|-|
-|group_id|integer|foreign_key: true|
-|message_id|integer|foreign_key: true|
-|name|string|null: false, unique: true, add_index :users, :name|
+|name|string|null: false, unique: true, add_index :true|
 |email||(devise), null: false, unique: true|
 |password||(devise), null: false|
 
 association
-- has_many :groups, through::group_users
+- has_many :groups, through: :group_users
 - has_many :group_users
 - has_many :messages
 
 ## messages table
 |column|Type|Options|
 |------|----|-------|
-|id|-|-|
 |user_id|integer|foreign_key: true|
 |group_id|integer|foreign_key: true|
 |body|text||
@@ -34,13 +30,10 @@ association
 ## groups table
 |column|Type|Options|
 |------|----|-------|
-|id|-|-|
-|user_id|integer||
-|message_id|integer|foreign_key: true|
 |name|string|null: false, unique: true|
 
 association
-- has_many :users, through::group_users
+- has_many :users, through: :group_users
 - has_many :group_users
 - has_many :messages
 
@@ -48,7 +41,6 @@ association
 ## group_users table
 |column|Type|Options|
 |------|----|-------|
-|id|-|-|
 |user_id|integer|foreign_key: true|
 |group_id|integer|foreign_key: true|
 
