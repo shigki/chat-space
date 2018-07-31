@@ -1,10 +1,11 @@
 html,body { height:100%; }
+@import "_variable.scss";
 .right {
   width: calc(100vw - 300px);
   height: calc(100vh - 20px);
   float: right;
   &__up {
-    background-color: #FFFFFF;
+    background-color: $basecolor;
     height: 15%;
     border-bottom: solid 1px #eeeeee;
     padding: 0 40px;
@@ -33,7 +34,7 @@ html,body { height:100%; }
     }
   }
   &__mid {
-    background-color: #FFFFFF;
+    background-color: $basecolor;
     height: calc(85% - 70px);
     overflow: scroll;
     padding: 0  40px;
@@ -79,7 +80,7 @@ html,body { height:100%; }
         margin-bottom: 10px;
       }
       &-picture {
-        color: #FFFFFF;
+        color: $basecolor;
         position: absolute;
         font-size: 2em;
         padding-left: 20px;

@@ -1,4 +1,5 @@
 html,body { height:100%; }
+@import "_variable.scss";
 .left {
   width: 300px;
   height: calc(100% - 20px);
@@ -10,31 +11,33 @@ html,body { height:100%; }
     position: relative;
     padding: 0  20px;
     &-name{
-      color: #FFFFFF;
+      color: $basecolor;
       font-size: 16px;
       font-weight: bold;
-      padding-top: 30px;
+      padding-top: 20px;
       width: 100px;
     }
     &-edit {
-      padding-top: 30px;
+      padding-top: 20px;
       font-size: 1em;
-      color: #FFFFFF;
+      color: $basecolor;
       margin-left: 100px;
 
     }
     &-account {
-      padding-top: 30px;
+      padding-top: 20px;
       font-size: 1em;
-      color: #FFFFFF;
+      color: $basecolor;
       display:inline-block;
     }
   }
+
+
   &__groups {
     height: 85%;
     width: 100%;
     &__list {
-      color: #FFFFFF;
+      color: $basecolor;
       padding: 20px;
       &-name {
         font-size: 16px;
@@ -42,7 +45,7 @@ html,body { height:100%; }
       &-message {
         padding: 5px 0 0 0;
         font-size: 11px;
-        color: #FFFFFF
+        color:$basecolor;
       }
     }
   }
