@@ -1,0 +1,12 @@
+html,body { height:100%; }
+.worning {
+  background-color: blue;
+  height: 20px;
+  width:100%;
+  &-sentence {
+    font-size: 14px;
+    color: white;
+    text-align:  center;
+    line-height: 20px;
+  }
+}
