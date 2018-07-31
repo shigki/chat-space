@@ -1,6 +1,7 @@
 html,body { height:100%; }
+@import "_variable.scss";
 .worning {
-  background-color: blue;
+  background-color: $thirdcolor;
   height: 20px;
   width:100%;
   &-sentence {

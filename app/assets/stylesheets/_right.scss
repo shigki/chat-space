@@ -17,12 +17,12 @@ html,body { height:100%; }
     }
     &__edit {
       float: right;
-      border: solid 1px blue;
+      border: solid 1px $thirdcolor;
       height: 40px;
       padding: 0 20px;
       margin: 2% 0;
       &-btn {
-        color: blue;
+        color: $thirdcolor;
         line-height: 40px;
       }
     }
@@ -88,11 +88,10 @@ html,body { height:100%; }
      }
       &-submit {
         float: right;
-        background-color: black;
         color: white;
-        border: solid 1px blue;
+        border: solid 1px $thirdcolor;
         padding: 0 20px;
-        background-color: blue;
+        background-color: $thirdcolor;
         margin-bottom: 10px;
         margin-left: 20px;
         height: 50px;
