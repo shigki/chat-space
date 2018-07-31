@@ -1,0 +1,165 @@
+html,body { height:100%; }
+
+.worning {
+  background-color: blue;
+  height: 20px;
+  width:100%;
+  &-sentence {
+    font-size: 14px;
+    color: white;
+    text-align:  center;
+    line-height: 20px;
+  }
+}
+
+.left {
+  width: 300px;
+  height: calc(100% - 20px);
+  background-color: #2f3e51;
+  display: inline-block;
+  &__userinfo {
+    height: 15%;
+    background-color: #253141;
+    position: relative;
+    padding: 0  20px;
+    &-name{
+      color: #FFFFFF;
+      font-size: 16px;
+      font-weight: bold;
+      padding-top: 20px;
+      width: 100px;
+    }
+    &-edit {
+      padding-top: 20px;
+      font-size: 1em;
+      color: #FFFFFF;
+      margin-left: 100px;
+
+    }
+    &-account {
+      padding-top: 20px;
+      font-size: 1em;
+      color: #FFFFFF;
+      display:inline-block;
+    }
+  }
+
+
+  &__groups {
+    height: 85%;
+    width: 100%;
+    &__list {
+      color: #FFFFFF;
+      padding: 20px;
+      &-name {
+        font-size: 16px;
+      }
+      &-message {
+        padding: 5px 0 0 0;
+        font-size: 11px;
+        color: #FFFFFF
+      }
+    }
+  }
+}
+
+.right {
+  width: calc(100vw - 300px);
+  height: calc(100vh - 20px);
+  float: right;
+  &__up {
+    background-color: #FFFFFF;
+    height: 15%;
+    border-bottom: solid 1px #eeeeee;
+    padding: 0 40px;
+    &-groupname {
+      color: #333333;
+      font-size: 20px;
+      padding-top: 10px;
+      display: inline-block;
+    }
+    &__edit {
+      float: right;
+      border: solid 1px blue;
+      height: 40px;
+      padding: 0 20px;
+      margin: 2% 0;
+      &-btn {
+        color: blue;
+        line-height: 40px;
+      }
+    }
+    &-member {
+      color: #999999;
+      font-size: 12px;
+      margin-top: 5px;
+      list-style: none;
+    }
+  }
+  &__mid {
+    background-color: #FFFFFF;
+    height: calc(85% - 70px);
+    overflow: scroll;
+    padding: 0  40px;
+    &__messagelist {
+      width: 50%;
+      height: 40px;
+      margin-top: 40px;
+      &-name {
+        padding-top: 46px;
+        font-size: 16px;
+        color: #434A54;
+      }
+      &-time {
+        font-size: 12px;
+        color: #999999;
+        vertical-align: top;
+      }
+      &-message {
+        font-size: 14px;
+        color: #434A54;
+        margin-top: 10px;
+
+      }
+    }
+  }
+
+  .right__bot{
+    height: 70px;
+    padding: 0  40px;
+    background-color: #AAAAAA;
+    position: relative;
+    &__input {
+      height: 50px;
+      position: absolute;
+      right: 40px;
+      top: 5px;
+      left: 50px;
+      bottom: 5px;
+      margin: auto;
+      &-message {
+        width: 75%;
+        height: 50px;
+        margin-bottom: 10px;
+      }
+      &-picture {
+        color: #FFFFFF;
+        position: relative;
+        font-size: 3em;
+        padding-left: 20px;
+        margin-bottom: 10px
+     }
+      &-submit {
+        float: right;
+        background-color: black;
+        color: white;
+        border: solid 1px blue;
+        padding: 0 20px;
+        background-color: blue;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        height: 50px;
+      }
+    }
+  }
+}
