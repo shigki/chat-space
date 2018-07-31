@@ -4,11 +4,11 @@
 .left
   .left__userinfo
     %span.left__userinfo-name sample
-    %a.left__userinfo-edit
-      = fa_icon "edit"
-      
-    %a.left__userinfo-account
-      = fa_icon "cog"
+    .left__userinfo-icons
+      = link_to '/messages' do
+        = fa_icon "edit"
+      =link_to 'messages' do
+        = fa_icon "cog"
   .left__groups
     .left__groups__list
       %p.left__groups__list-name sampleグループ

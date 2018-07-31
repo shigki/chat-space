@@ -10,25 +10,26 @@ html,body { height:100%; }
     background-color: #253141;
     position: relative;
     padding: 0  20px;
-    &-name{
+    &-name {
       color: $basecolor;
       font-size: 16px;
       font-weight: bold;
       padding-top: 20px;
+      position: absolute;
       width: 100px;
     }
-    &-edit {
+    &-icons{
       padding-top: 20px;
-      font-size: 1em;
       color: $basecolor;
-      margin-left: 100px;
-
-    }
-    &-account {
-      padding-top: 20px;
       font-size: 1em;
-      color: $basecolor;
-      display:inline-block;
+      float: right;
+      width: 100px;
+      &-edit {
+        margin-left: 100px;
+      }
+      &-account {
+        display:inline-block;
+      }
     }
   }
 
