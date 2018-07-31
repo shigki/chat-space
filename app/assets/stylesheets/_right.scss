@@ -27,7 +27,7 @@ html,body { height:100%; }
       }
     }
     &-member {
-      color: #999999;
+      color: $secondcolor;
       font-size: 12px;
       margin-top: 5px;
       list-style: none;
@@ -49,7 +49,7 @@ html,body { height:100%; }
       }
       &-time {
         font-size: 12px;
-        color: #999999;
+        color: $secondcolor;
         vertical-align: top;
       }
       &-message {
