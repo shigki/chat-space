@@ -10,13 +10,7 @@
       =link_to "#" do
         = fa_icon "cog"
   .left__groups
-    .left__groups__list
-      %p.left__groups__list-name sampleグループ
-      %p.left__groups__list-message メッセージはありません。
-    .left__groups__list
-      %p.left__groups__list-name 繰り返しグループ
-      %p.left__groups__list-message 繰り返しメッセージ
-
+    = render partial: "left__grouplist"
 
 .right
   .right__up
@@ -25,30 +19,7 @@
       %p.right__up__edit-btn Edit
     %li.right__up-member Member: ABCDE
   .right__mid
-    .right__mid__messagelist
-      %span.right__mid__messagelist-name ABCDE
-      %span.right__mid__messagelist-time 2018/07/31 15:02
-      %p.right__mid__messagelist-message サンプルサンプルサンプルサンプルサンプル
-    .right__mid__messagelist
-      %span.right__mid__messagelist-name 繰り返しABCDE
-      %span.right__mid__messagelist-time 2018/07/31 15:02
-      %p.right__mid__messagelist-message 繰り返し繰り返し繰り返し繰り返し
-    .right__mid__messagelist
-      %span.right__mid__messagelist-name 繰り返しABCDE
-      %span.right__mid__messagelist-time 2018/07/31 15:02
-      %p.right__mid__messagelist-message 繰り返し繰り返し繰り返し繰り返し
-    .right__mid__messagelist
-      %span.right__mid__messagelist-name 繰り返しABCDE
-      %span.right__mid__messagelist-time 2018/07/31 15:02
-      %p.right__mid__messagelist-message 繰り返し繰り返し繰り返し繰り返し
-    .right__mid__messagelist
-      %span.right__mid__messagelist-name 繰り返しABCDE
-      %span.right__mid__messagelist-time 2018/07/31 15:02
-      %p.right__mid__messagelist-message 繰り返し繰り返し繰り返し繰り返し
-    .right__mid__messagelist
-      %span.right__mid__messagelist-name 繰り返しABCDE
-      %span.right__mid__messagelist-time 2018/07/31 15:02
-      %p.right__mid__messagelist-message 繰り返し繰り返し繰り返し繰り返し
+    = render partial: "right__messagelist"
   .right__bot
     %form.right__bot__input
       %textarea{ class: "right__bot__input-message"}
