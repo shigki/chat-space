@@ -20,10 +20,8 @@ html,body { height:100%; }
       height: 40px;
       padding: 0 20px;
       margin: 2% 0;
-      &-btn {
-        color: $thirdcolor;
-        line-height: 40px;
-      }
+      color: $thirdcolor;
+      line-height: 40px;
     }
     &-member {
       color: $secondcolor;
