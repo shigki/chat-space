@@ -16,7 +16,7 @@
   .right__up
     %span.right__up-groupname  サンプルグループ
     %a.right__up__edit
-      %p.right__up__edit-btn Edit
+    =link_to "Edit", class:"right__up__edit-btn"
     %li.right__up-member Member: ABCDE
   .right__mid
     = render partial: "right__messagelist"
