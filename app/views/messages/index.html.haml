@@ -1,0 +1,28 @@
+.worning
+  %p.worning-sentence チャットグループを作成しました。
+
+.left
+  .left__userinfo
+    %span.left__userinfo-name sample
+    .left__userinfo-icons
+      = link_to "#" do
+        = fa_icon "edit"
+      =link_to "#" do
+        = fa_icon "cog"
+  .left__groups
+    = render partial: "left__grouplist"
+
+.right
+  .right__up
+    %span.right__up-groupname  サンプルグループ
+    .right__up__edit
+      =link_to "Edit", class:"right__up__edit-btn"
+    %li.right__up-member Member: ABCDE
+  .right__mid
+    = render partial: "right__messagelist"
+  .right__bot
+    %form.right__bot__input
+      %textarea{ class: "right__bot__input-message"}
+      %a.right__bot__input-picture
+        %i.fa.fa-image
+      %input.right__bot__input-submit{name: "submit", type: "submit", value: "Send"}

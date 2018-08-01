@@ -1,0 +1,52 @@
+html,body { height:100%; }
+.left {
+  width: 300px;
+  height: calc(100% - 20px);
+  background-color: #2f3e51;
+  display: inline-block;
+  &__userinfo {
+    height: 15%;
+    background-color: #253141;
+    position: relative;
+    padding: 0  20px;
+    &-name {
+      color: $basecolor;
+      font-size: 16px;
+      font-weight: bold;
+      padding-top: 20px;
+      position: absolute;
+      width: 100px;
+    }
+    &-icons{
+      padding-top: 20px;
+      font-size: 1em;
+      float: right;
+      .fa-edit {
+        margin-left: 100px;
+        color: $basecolor;
+      }
+      .fa-cog {
+        display:inline-block;
+        color: $basecolor;
+      }
+    }
+  }
+
+
+  &__groups {
+    height: 85%;
+    width: 100%;
+    &__list {
+      color: $basecolor;
+      padding: 20px;
+      &-name {
+        font-size: 16px;
+      }
+      &-message {
+        padding: 5px 0 0 0;
+        font-size: 11px;
+        color:$basecolor;
+      }
+    }
+  }
+}

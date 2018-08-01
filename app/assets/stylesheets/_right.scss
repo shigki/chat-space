@@ -1,0 +1,98 @@
+html,body { height:100%; }
+.right {
+  width: calc(100vw - 300px);
+  height: calc(100vh - 20px);
+  float: right;
+  &__up {
+    background-color: $basecolor;
+    height: 15%;
+    border-bottom: solid 1px #eeeeee;
+    padding: 0 40px;
+    &-groupname {
+      color: #333333;
+      font-size: 20px;
+      padding-top: 10px;
+      display: inline-block;
+    }
+    &__edit {
+      float: right;
+      border: solid 1px $thirdcolor;
+      height: 40px;
+      padding: 0 20px;
+      margin: 2% 0;
+      color: $thirdcolor;
+      line-height: 40px;
+    }
+    &-member {
+      color: $secondcolor;
+      font-size: 12px;
+      margin-top: 5px;
+      list-style: none;
+    }
+  }
+  &__mid {
+    background-color: $basecolor;
+    height: calc(85% - 70px);
+    overflow: scroll;
+    padding: 0  40px;
+    &__messagelist {
+      width: 50%;
+      height: 40px;
+      margin-top: 40px;
+      &-name {
+        padding-top: 46px;
+        font-size: 16px;
+        color: #434A54;
+      }
+      &-time {
+        font-size: 12px;
+        color: $secondcolor;
+        vertical-align: top;
+      }
+      &-message {
+        font-size: 14px;
+        color: #434A54;
+        margin-top: 10px;
+
+      }
+    }
+  }
+
+  .right__bot{
+    height: 70px;
+    padding: 0  40px;
+    background-color: #AAAAAA;
+    position: relative;
+    &__input {
+      height: 50px;
+      position: absolute;
+      right: 40px;
+      top: 5px;
+      left: 50px;
+      bottom: 5px;
+      margin: auto;
+      &-message {
+        width: 75%;
+        height: 50px;
+        margin-bottom: 10px;
+      }
+      &-picture {
+        color: $basecolor;
+        position: absolute;
+        font-size: 2em;
+        padding-left: 20px;
+        margin-bottom: 10px
+     }
+      &-submit {
+        float: right;
+        color: white;
+        border: solid 1px $thirdcolor;
+        padding: 0 20px;
+        background-color: $thirdcolor;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        height: 50px;
+      }
+    }
+  }
+}
