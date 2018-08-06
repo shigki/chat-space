@@ -41,6 +41,7 @@ html,body { height:100%; }
       padding: 20px;
       &-name {
         font-size: 16px;
+        color:$basecolor;
       }
       &-message {
         padding: 5px 0 0 0;
