@@ -1,6 +1,3 @@
-
-28
-29
 class MessagesController < ApplicationController
   before_action :set_group
 
