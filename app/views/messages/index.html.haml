@@ -21,10 +21,10 @@
   .right__mid
     = render partial: "right__messagelist"
   .right__bot
-    .form.right__bot__input
+    .right__bot__input
       = form_for [@group, @message] do |f|
-        =f.text.field :content, class: "right__bot__input-message", placeholder: 'メッセージを入力してください'
-      %a.right__bot__input-picture
-        %i.fa.fa-image
-
-      = f.submit '送信', class: 'right__bot__input-submit'
+        = f.text_field :content, class: "right__bot__input-message", placeholder: 'メッセージを入力してください'
+        = f.label :image, class: 'right__bot__input-picture' do
+          %i.fa.fa-image
+          = f.file_field :image, style: "display: none;"
+        = f.submit '送信', class: 'right__bot__input-submit'
