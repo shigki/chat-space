@@ -21,8 +21,10 @@
   .right__mid
     = render partial: "right__messagelist"
   .right__bot
-    %form.right__bot__input
-      %textarea{ class: "right__bot__input-message"}
+    .form.right__bot__input
+      = form_for [@group, @message] do |f|
+        =f.text.field :content, class: "right__bot__input-message", placeholder: 'メッセージを入力してください'
       %a.right__bot__input-picture
         %i.fa.fa-image
-      %input.right__bot__input-submit{name: "submit", type: "submit", value: "Send"}
+
+      = f.submit '送信', class: 'right__bot__input-submit'
