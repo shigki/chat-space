@@ -1,0 +1,15 @@
+.right
+  .right__up
+    %span.right__up-groupname  サンプルグループ
+    .right__up__edit
+      =link_to "Edit", class:"right__up__edit-btn"
+    %li.right__up-member Member: ABCDE
+  .right__mid
+  .right__bot
+    .right__bot__input
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: "right__bot__input-message", placeholder: 'メッセージを入力してください'
+        = f.label :image, class: 'right__bot__input-picture' do
+          %i.fa.fa-image
+          = f.file_field :image, style: "display: none;"
+        = f.submit '送信', class: 'right__bot__input-submit'
