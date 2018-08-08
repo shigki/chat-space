@@ -1,0 +1,28 @@
+.right
+  .right__up
+    %span.right__up-groupname
+      = @group.name
+    .right__up__edit
+      =link_to "Edit", edit_group_path(@group), class:"right__up__edit-btn"
+    %li.right__up-member Member:
+
+  .right__mid
+    .right__mid__messagelist
+      - @messages.each do |message|
+        %span.right__mid__messagelist-name
+          = message.user.name
+        %span.right__mid__messagelist-time
+          = message.created_at
+        %p.right__mid__messagelist-message
+          - if message.content.present?
+            = message.content
+            = image_tag message.image.url if message.image.present?
+
+  .right__bot
+    .right__bot__input
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: "right__bot__input-message", placeholder: 'メッセージを入力してください'
+        = f.label :image, class: 'right__bot__input-picture' do
+          %i.fa.fa-image
+          = f.file_field :image, style: "display: none;"
+        = f.submit '送信', class: 'right__bot__input-submit'
