@@ -28,6 +28,9 @@ $(function(){
     	$('.right__mid__messagelist').append(html)
     	$("form")[0].reset();
     	//$('.right__bot__input-message').val('')
+    	var target = $(".right__mid").get(0).scrollHeight;
+    	$('.right__mid').animate({scrollTop: target}, 'fast');
+
     })
     .fail(function(){
     	alert('error');
