@@ -1,5 +1,5 @@
 $(function(){
-	function buuildHTML(message){
+	function buildHTML(message){
 		var html = `<span class="right__mid__messagelist-name">
 									${message.user_name}
 								</span>
@@ -11,7 +11,6 @@ $(function(){
 								</p>`
 		return html;
 	}
-
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -27,10 +26,12 @@ $(function(){
     .done(function(data){
     	var html = buildHTML(data);
     	$('.right__mid__messagelist').append(html)
-    	$('.right__bot__input-message').val('')
+    	$("form")[0].reset();
+    	//$('.right__bot__input-message').val('')
     })
     .fail(function(){
     	alert('error');
     })
+    return false;
   })
 });
