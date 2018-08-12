@@ -29,5 +29,8 @@ $(function(){
     	$('.right__mid__messagelist').append(html)
     	$('.right__bot__input-message').val('')
     })
+    .fail(function(){
+    	alert('error');
+    })
   })
 });
