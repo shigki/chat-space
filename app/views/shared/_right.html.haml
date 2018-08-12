@@ -16,7 +16,7 @@
         %p.right__mid__messagelist-message
           - if message.content.present?
             = message.content
-        = image_tag message.image if message.image.present?
+          = image_tag message.image if message.image.present?
 
   .right__bot
     .right__bot__input
