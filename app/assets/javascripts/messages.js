@@ -1,4 +1,17 @@
 $(function(){
+	function buuildHTML(message){
+		var html = `<span class="right__mid__messagelist-name">
+									${message.user_name}
+								</span>
+								<span class="right__mid__messagelist-time">
+									${message.created_at}
+								</span>
+								<p class="right__mid__messagelist-message">
+									${message.content}
+								</p>`
+		return html;
+	}
+
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
