@@ -81,7 +81,10 @@
     padding: 0 15px;
     line-height: 50px;
     font-size: 14px;
+    height: 54px;
     border-bottom: 1px solid #ddd;
+    width: 600px;
+    float: right;
     &:after {
       content: "";
       clear: both;
