@@ -1,6 +1,7 @@
 $(function() {
 
 var user_list = $("#user-search-result");
+// var member_list = $("#member-search-result");
 
 function appendUser(user) {
 	var html = `<div class="chat-group-user">
@@ -8,7 +9,7 @@ function appendUser(user) {
 									${user.name}
 								</p>
 								<div class="chat-group-user__btn">
-									<a id="add-btn"  class="chat-group-user__btn--add">
+									<a class="chat-group-user__btn--add add_btn" data-user-id="${user.id}">
 									追加
 									</a>
 								</div>
@@ -25,12 +26,21 @@ function appendNoUser(message) {
 	user_list.append(html);
 }
 
+// function appendMember(id仮, user仮) {
+// 	var = html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
+//   								<input name='group[user_ids][]' type='hidden' value='${user.id}'>
+//   								<p class='chat-group-user__name'>${user.name}</p>
+//   								<a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
+// 									</div>`
+// 	member_list.append(html);
+// }
+
+
   $('#user-search-field').on("keyup", function() {
   	var input = $(this).val();
   	var trimmed_input = input.trim();
   	var reg = new RegExp("^" + trimmed_input);
    	$("#user-search-result").empty();
-   	// console.log(reg);
   	$.ajax({
   		type: 'GET',
   		url: '/users',
@@ -63,7 +73,18 @@ function appendNoUser(message) {
   });
 
   // $(function() {
-  // 	$(document).on("click", )
+  	$(document).on("click", ".add_btn", function(event){
+  		console.log(event.target)
+  		console.log($(event.target).data("user-id"))
+  		// console.log(id)
+			// ユーザーの名前がチャットメンバーに加わる(append)＆チャットメンバーを追加かから消える(remove)
+  	})
+
+  // })
+  // $(function() {
+  // 	$(document).on("click", "user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn", function(){
+  // ユーザーの名前がチャットメンバーから消え、追加に表示される
+  // 	})
 
   // })
 });
