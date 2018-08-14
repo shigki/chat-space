@@ -39,7 +39,7 @@ function appendNoUser(message) {
   $('#user-search-field').on("keyup", function() {
   	var input = $(this).val();
   	var trimmed_input = input.trim();
-  	var reg = new RegExp("^" + trimmed_input);
+  	// var reg = new RegExp("^" + trimmed_input);
    	$("#user-search-result").empty();
   	$.ajax({
   		type: 'GET',
