@@ -38,7 +38,6 @@ function appendMember(name, id) {
   	var input = $(this).val();
   	var trimmed_input = input.trim();
   	// var reg = new RegExp("^" + trimmed_input);
-   	$("#user-search-result").empty();
   	$.ajax({
   		type: 'GET',
   		url: '/users',
