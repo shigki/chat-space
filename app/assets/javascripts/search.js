@@ -10,7 +10,7 @@ $(function() {
 									<a class="chat-group-user__btn chat-group-user__btn--add add_btn" data-user-id="${user.id}" data-user-name="${user.name}">
 										追加
 									</a>
-								</div>`
+							  </div>`
   	user_list.append(html);
 	}
 
@@ -54,8 +54,7 @@ $(function() {
   			users.forEach(function(user){
   				appendUser(user);
   			});
-  		}
-  		else {
+  		} else {
   			appendNoUser("一致するユーザーはいません");
    		// $("#user-search-result").empty();
    		// 磯田さん加筆
