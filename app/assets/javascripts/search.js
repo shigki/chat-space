@@ -1,37 +1,36 @@
 $(function() {
+	var user_list = $("#user-search-result");
+	var member_list = $("#member-search-result");
 
-var user_list = $("#user-search-result");
-var member_list = $("#member-search-result");
+	function appendUser(user) {
+		var html = `<div class="chat-group-user">
+									<p class="chat-group-user-name">
+										${user.name}
+									</p>
+									<a class="chat-group-user__btn chat-group-user__btn--add add_btn" data-user-id="${user.id}" data-user-name="${user.name}">
+										追加
+									</a>
+								</div>`
+  	user_list.append(html);
+	}
 
-function appendUser(user) {
-	var html = `<div class="chat-group-user">
-								<p class="chat-group-user-name">
-									${user.name}
-								</p>
-								<a class="chat-group-user__btn chat-group-user__btn--add add_btn" data-user-id="${user.id}" data-user-name="${user.name}">
-									追加
-								</a>
-							</div>`
-  user_list.append(html);
-}
+	function appendNoUser(message) {
+		var html = `<div class="chat-group-user">
+									<p class="chat-group-user-message">
+										${message}
+									</p>
+								</div>`
+		user_list.append(html);
+	}
 
-function appendNoUser(message) {
-	var html = `<div class="chat-group-user">
-								<p class="chat-group-user-message">
-									${message}
-								</p>
-							</div>`
-	user_list.append(html);
-}
-
-function appendMember(name, id) {
-	var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
+	function appendMember(name, id) {
+		var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
   								<input name='group[user_ids][]' type='hidden' value='${id}'>
-  								<p class='chat-group-user-name'>${name}</p>
-  								<a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
-									</div>`
-	member_list.append(html);
-}
+  									<p class='chat-group-user-name'>${name}</p>
+  									<a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
+								</div>`
+		member_list.append(html);
+	}
 
 
   $('#user-search-field').on("keyup", function() {
