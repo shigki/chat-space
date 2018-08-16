@@ -1,5 +1,17 @@
 class UsersController < ApplicationController
 
+  def index
+    if params[:keyword].empty?
+      @users = []
+    else
+      @users = User.where('name LIKE(?)', "#{params[:keyword]}%")
+        respond_to do |format|
+        format.html
+        format.json
+        end
+      end
+  end
+
   def edit
   end
 

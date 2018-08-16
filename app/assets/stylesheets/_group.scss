@@ -81,15 +81,21 @@
     padding: 0 15px;
     line-height: 50px;
     font-size: 14px;
+    height: 54px;
     border-bottom: 1px solid #ddd;
+    width: 600px;
+    float: right;
     &:after {
       content: "";
       clear: both;
       display: block;
     }
 
-    .chat-group-user__name {
+    .chat-group-user-name {
       float: left;
+    }
+    .chat-group-user-message {
+      color: red;
     }
 
     .chat-group-user__btn {
