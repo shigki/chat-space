@@ -12,14 +12,15 @@
   .right__mid
     .right__mid__messagelist
       - @messages.each do |message|
-        %span.right__mid__messagelist-name
-          = message.user.name
-        %span.right__mid__messagelist-time
-          = message.created_at
-        %p.right__mid__messagelist-message
-          - if message.content.present?
-            = message.content
-          = image_tag message.image if message.image.present?
+        .right__mid__messagelist-each
+          %span.right__mid__messagelist-name
+            = message.user.name
+          %span.right__mid__messagelist-time
+            = message.created_at
+          %p.right__mid__messagelist-message
+            - if message.content.present?
+              = message.content
+            = image_tag message.image if message.image.present?
 
   .right__bot
     .right__bot__input
