@@ -5,6 +5,9 @@
     .right__up__edit
       =link_to "Edit", edit_group_path(@group), class:"right__up__edit-btn"
     %li.right__up-member Member:
+    %span
+      - @group.users.each do |user|
+        = user.name
 
   .right__mid
     .right__mid__messagelist
