@@ -1,7 +1,12 @@
-json.message	@message.each do |message|
+# if @new_message.present?
+json.array!	@new_messages do |message|
 	json.name		message.user.name
 	json.date		message.created_at
 	json.content	message.content
-	json.i,age		message.image
-	json.id			message.id
+	json.image		message.image.url
+	json.message_id		message.id
 end
+# end
+# if @new_message.present?
+# 	json.array! @new_message
+# end

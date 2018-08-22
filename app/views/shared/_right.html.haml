@@ -12,7 +12,7 @@
   .right__mid
     .right__mid__messagelist
       - @messages.each do |message|
-        .right__mid__messagelist-each
+        .right__mid__messagelist__each{'data-message_id': message.id}
           %span.right__mid__messagelist-name
             = message.user.name
           %span.right__mid__messagelist-time
