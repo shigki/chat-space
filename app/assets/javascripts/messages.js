@@ -57,9 +57,9 @@ $(function(){
         // 新しいメッセージがあれば
          // data.forEach(function(message){
           // 各メッセージに分けて読み込む
-        data.forEach(function(message) {
+        data.forEach(function(data) {
           var html = buildHTML(data);
-          $('.right__mid__messagelist').append(html)
+          $('.right__mid__messagelist').append(html);
         })
 
         $("form")[0].reset();
