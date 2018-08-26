@@ -44,7 +44,7 @@ $(function(){
     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
       var last_id = $(".right__mid__messagelist__each").last().data('message_id');
       console.log(last_id);
-      console.log(window.location.href);
+      // console.log(window.location.href);
       $.ajax({
         url: location.href,
         type: 'GET',
@@ -57,8 +57,8 @@ $(function(){
         // 新しいメッセージがあれば
          // data.forEach(function(message){
           // 各メッセージに分けて読み込む
-        data.forEach(function(data) {
-          var html = buildHTML(data);
+        data.forEach(function(a) {
+          var html = buildHTML(a);
           $('.right__mid__messagelist').append(html);
         })
 
@@ -71,7 +71,5 @@ $(function(){
       });
   } else {
       clearInterval(interval)
-    // clearInterval(interval);
-    // ↑は後で消す
   }} ,5000 );
 });
