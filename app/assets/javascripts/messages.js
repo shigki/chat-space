@@ -40,36 +40,36 @@ $(function(){
     return false;
   })
 
-  var interval = setInterval(function(){
-    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
-      var last_id = $(".right__mid__messagelist__each").last().data('message_id');
-      console.log(last_id);
-      // console.log(window.location.href);
-      $.ajax({
-        url: location.href,
-        type: 'GET',
-        data: {
-          last_id: last_id},
-        dataType: 'json'
-      })
-      .done(function(data){
-        // console.log(data);
-        // 新しいメッセージがあれば
-         // data.forEach(function(message){
-          // 各メッセージに分けて読み込む
-        data.forEach(function(a) {
-          var html = buildHTML(a);
-          $('.right__mid__messagelist').append(html);
-        })
+//   var interval = setInterval(function(){
+//     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+//       var last_id = $(".right__mid__messagelist__each").last().data('message_id');
+//       console.log(last_id);
+//       // console.log(window.location.href);
+//       $.ajax({
+//         url: location.href,
+//         type: 'GET',
+//         data: {
+//           last_id: last_id},
+//         dataType: 'json'
+//       })
+//       .done(function(data){
+//         // console.log(data);
+//         // 新しいメッセージがあれば
+//          // data.forEach(function(message){
+//           // 各メッセージに分けて読み込む
+//         data.forEach(function(a) {
+//           var html = buildHTML(a);
+//           $('.right__mid__messagelist').append(html);
+//         })
 
-        $("form")[0].reset();
-        var target = $(".right__mid").get(0).scrollHeight;
-        $('.right__mid').animate({scrollTop: target}, 'fast');
-      })
-      .fail(function(data){
-        alert('自動更新に失敗しました。')
-      });
-  } else {
-      clearInterval(interval)
-  }} ,5000 );
-});
+//         $("form")[0].reset();
+//         var target = $(".right__mid").get(0).scrollHeight;
+//         $('.right__mid').animate({scrollTop: target}, 'fast');
+//       })
+//       .fail(function(data){
+//         alert('自動更新に失敗しました。')
+//       });
+//   } else {
+//       clearInterval(interval)
+//   }} ,5000 );
+// });
